@@ -28,7 +28,7 @@ RUN echo "ADDON_VERSION=v${BUILD_VERSION}" >> versions.txt && \
     /opt/venv/bin/pip install --no-cache \
         carconnectivity==${CC_VERSION#v} \
         carconnectivity-connector-skoda==${SKODA_VERSION#v} \
-        carconnectivity-connector-audi==${AUDI_VERSION#v} \
+        "carconnectivity-connector-audi @ git+https://github.com/Pulpyyyy/CarConnectivity-connector-audi.git@patch-1" \
         carconnectivity-connector-volkswagen_na==${VWNA_VERSION#v} \
         "carconnectivity-connector-vw-eu-data-act @ git+https://github.com/Pulpyyyy/CarConnectivity-connector-vw-eu-data-act.git@dev" \
         carconnectivity-connector-renaultdacia==${RENAULTDACIA_VERSION#v} \
